@@ -42,8 +42,25 @@ Console.WriteLine(max);
 -3 -> нет
 7 -> нет */
 
+/*
 int N;
 N = int.Parse(Console.ReadLine());
 if((N%2)==0)
     {Console.WriteLine($"{N}, чётное");}
 else{Console.Write($"{N}, не четное");}
+*/
+
+/* Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
+
+5 -> 2, 4
+8 -> 2, 4, 6, 8 */
+
+int N = int.Parse(Console.ReadLine());
+
+for (int i = 0; i <= N; i++)
+{
+    if ((i%2)==0)
+    {
+        Console.WriteLine(i);
+    }
+}
