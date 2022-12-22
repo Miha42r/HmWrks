@@ -22,7 +22,7 @@ else
 2, 3, 7 -> 7
 44 5 78 -> 78
 22 3 9 -> 22 */
-
+/*
 int a = 2; int b = 3; int c = 7; int max = 0;
 
 if (a > b)
@@ -34,3 +34,16 @@ if (max > c)
 else
     {max = c;}
 Console.WriteLine(max);
+*/
+
+/* Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
+
+4 -> да
+-3 -> нет
+7 -> нет */
+
+int N;
+N = int.Parse(Console.ReadLine());
+if((N%2)==0)
+    {Console.WriteLine($"{N}, чётное");}
+else{Console.Write($"{N}, не четное");}
