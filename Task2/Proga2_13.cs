@@ -1,9 +1,3 @@
-﻿int Input(int str)
-{
-str = int.Parse(Console.ReadLine()!);
-return str;
-}
-
 int EjectThirdDigit(int x) //Извлекаем третий разряд
 {
     Console.WriteLine("Извлекаем третий разряд");
