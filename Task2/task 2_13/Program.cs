@@ -3,34 +3,28 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        int EjectThirdDigit(int x) //Извлекаем третий разряд
+        int EjectThirdDigit(int x) 
         {
             Console.WriteLine("Извлекаем третий разряд");
-            int a = x % 10;
-            return a;
-        }
-
-        int DigitsNumber(int numb) // привожу число к трёхзначному
-        {
-            Console.WriteLine("Приводим число к трехзначному");
-            while (numb > 999)
+            
+            while (x > 999) //уменьшаем до трехзначного числа
             {
-                numb = numb / 10;
+                x = x / 10;
             }
-            return numb;
+            int a = x % 10; //Извлекаем третий разряд
+            return a;
         }
 
         Console.WriteLine("Введите число");
         int numb = int.Parse(Console.ReadLine()!);
 
-        if (numb < 99) //проверяем разрядность числа
+        if (numb <= 99) //проверяем разрядность числа
         {
             Console.WriteLine($"{numb} - у данного числа нет третьего разряда, введите число");
             return;
         }
-        if (numb > 999)
+        if (numb >= 999)
         {
-            numb = DigitsNumber(numb);
             Console.WriteLine(EjectThirdDigit(numb));
         }
         else

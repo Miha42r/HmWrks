@@ -4,9 +4,13 @@
     {
         Console.WriteLine("Будни");
     }
+    else if (n == 6 || n == 7)
+    {
+        Console.WriteLine("Выходной");
+    }
     else
     {
-        if (n == 6 || n == 7) Console.WriteLine("Выходной");
+        Console.WriteLine("Вы ввели некорректное число, введите число от 1 до 7!");
     }
 }
 

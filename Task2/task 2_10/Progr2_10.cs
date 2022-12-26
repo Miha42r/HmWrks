@@ -7,7 +7,13 @@
 
 Console.WriteLine("Введите число");
 int numb = int.Parse(Console.ReadLine()!);
-if (numb < 999)
+
+if (numb <= 99) //проверяем разрядность числа
+{
+    Console.WriteLine($"{numb} - у данного числа нет третьего разряда, введите число");
+    return;
+}
+else
 {
     Console.WriteLine(EjectTwoDigit(numb));
 }
