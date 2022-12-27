@@ -1,8 +1,4 @@
 ﻿
-internal class Program
-{
-    private static void Main(string[] args)
-    {
         int EjectThirdDigit(int x) 
         {
             Console.WriteLine("Извлекаем третий разряд");
@@ -23,13 +19,8 @@ internal class Program
             Console.WriteLine($"{numb} - у данного числа нет третьего разряда, введите число");
             return;
         }
-        if (numb >= 999)
-        {
-            Console.WriteLine(EjectThirdDigit(numb));
-        }
         else
         {
             Console.WriteLine(EjectThirdDigit(numb));
         }
-    }
-}
+        
