@@ -1,27 +1,22 @@
-﻿void SimpleNumber(int numb)
+﻿bool SimpleNumber(int numb)
 {
-    int[] arr = new int[numb];                  //создаем массив
-    for (int index = 0; index < numb; index++)
+    for (int j = 2; j < numb; j++)
     {
-        arr[index] = index + 1;
-    }
-
-    for (int i = 1; i < numb; i++)
-    {
-        for(int j = 2; j <= numb; j++)
+        if (numb % j == 0)
         {
-        if (arr[i] % j != 0)
-            {
-            arr[i] = i;
-            }
-            Console.WriteLine(arr[i]);
+            return false;
         }
-    
     }
+    return true;
 }
-
 
 Console.WriteLine("Введите число ");
 int numb = int.Parse(Console.ReadLine()!);
 
-SimpleNumber(numb);
+for (int i = 1; i < numb; i++)
+{
+    if (SimpleNumber(i))
+    {
+        Console.Write($"{i} ");
+    }
+}
