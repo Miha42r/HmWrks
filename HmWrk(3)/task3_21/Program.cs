@@ -13,8 +13,8 @@ double DistanseCoordinate()
     double yb = double.Parse(Console.ReadLine()!);
     double zb = double.Parse(Console.ReadLine()!);
 
-    double Dist = Math.Sqrt(((xa - xb)*(xa - xb)) + ((ya - yb)*(ya - yb)) + ((za - zb)*(za - zb)));
-return Dist;
+    double Dist = Math.Sqrt(((xa - xb) * (xa - xb)) + ((ya - yb) * (ya - yb)) + ((za - zb) * (za - zb)));
+    return Dist;
 }
 
 Console.WriteLine("Вычисление растояния между двумя точками по координатам(3D)");
