@@ -3,7 +3,7 @@
 [1 2 3 4 5] -> 5 8 3
 [6 7 3 6] -> 36 21
 */
-int[] CreateArray(int length, int min = 1, int max = 9)
+int[] CreateArray(int length, int min = -10 , int max = 9)
 {
     Random rnd = new Random();
     int[] collection = new int[length];
