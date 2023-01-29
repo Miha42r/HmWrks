@@ -26,7 +26,7 @@ void PrintArray(int[,] array)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            Console.Write($"{array[i, j], -2}");
+            Console.Write($"{array[i, j],-2}");
         }
         Console.WriteLine();
     }
@@ -34,15 +34,17 @@ void PrintArray(int[,] array)
 
 void ArifmeticMeanColumns(int[,] array, int rows)
 {
-int sum = 0;
-double arif = 0;
-    for (int i = 0; i < array.GetLength(0); i++)
+    int sum = 0;
+    
+    for (int i = 0; i < array.GetLength(1); i++)
     {
+        sum = 0;
         for (int j = 0; j < rows; j++)
         {
             sum += array[j, i];
         }
-    Console.Write($"{(arif = sum / rows):f2} ");
+        double arif = sum / rows;
+        Console.Write($"{arif} ");
     }
 }
 
