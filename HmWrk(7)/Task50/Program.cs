@@ -47,7 +47,7 @@ col = col -1;
 
 int[,] array = CreateArray();
 PrintArray(array);
-int QuantityRows = array.GetUpperBound(0); // количество строк
+int QuantityRows = array.GetLength(1); // количество строк
 if ((rows > QuantityRows) || (col > array.GetLength(0)))
 {
     Console.WriteLine(" нет такой позиции");

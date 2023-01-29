@@ -35,15 +35,15 @@ void PrintArray(int[,] array)
 void ArifmeticMeanColumns(int[,] array, int rows)
 {
     int sum = 0;
-    
+    double arif = 0.00;
     for (int i = 0; i < array.GetLength(1); i++)
     {
         sum = 0;
-        for (int j = 0; j < rows; j++)
+        for (int j = 0; j < array.GetLength(0); j++)
         {
             sum += array[j, i];
         }
-        double arif = sum / rows;
+        arif = sum / rows;
         Console.Write($"{arif} ");
     }
 }
