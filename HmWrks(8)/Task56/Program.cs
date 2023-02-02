@@ -35,7 +35,7 @@ void PrintArray(int[,] array)
     }
 }
 
-void SortStringArray(int[,] arr)
+void FindMinimalIndexArray(int[,] arr)
 {
     int[] sumString = new int[arr.GetLength(0)];
     for (int i = 0; i < arr.GetLength(0); i++)
@@ -44,11 +44,9 @@ void SortStringArray(int[,] arr)
         {
             sumString[i] = sumString[i] + arr[i, j];
         }
-        Console.WriteLine(sumString[i]);
+        //Console.WriteLine(sumString[i]);
     }
     int min = 0;
-    //for (int i = 0; i < sumString.Length-1; i++)
-    //{
         for (int j = 1; j < sumString.Length; j++)
         {
             if (sumString[0] > sumString[j])
@@ -57,12 +55,11 @@ void SortStringArray(int[,] arr)
             }
             
         }
-    //}
     Console.WriteLine($"минимальная сумма в строке c индексом № {min}");
 }
-//int[,] arr = CreateArray();
-//PrintArray(arr); // выводим полученный массив
-//Console.WriteLine("Полученный массив отсортирован по строчно по убыванию");
-int[,] arr = { { 1, 4, 7, 2 }, { 5, 9, 2, 3 }, { 8, 4, 2, 4 }, { 5, 2, 6, 7 } };
-SortStringArray(arr);
+int[,] arr = CreateArray();
+PrintArray(arr); // выводим полученный массив
+Console.WriteLine();
+//int[,] arr = { { 1, 4, 7, 2 }, { 5, 9, 2, 3 }, { 8, 4, 2, 4 }, { 5, 2, 6, 7 } };
+FindMinimalIndexArray(arr);
 //PrintArray(arr);
