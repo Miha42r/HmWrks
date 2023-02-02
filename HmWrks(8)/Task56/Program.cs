@@ -46,19 +46,19 @@ void SortStringArray(int[,] arr)
         }
         Console.WriteLine(sumString[i]);
     }
-    int min = -1;
-    for (var i = 0; i < sumString.Length; i++)
-    {
-        for (var j = 1; j < sumString.Length-1; j++)
+    int min = 0;
+    //for (int i = 0; i < sumString.Length-1; i++)
+    //{
+        for (int j = 1; j < sumString.Length; j++)
         {
-            if (sumString[i] < sumString[j])
+            if (sumString[0] > sumString[j])
             {
-                min = i;
+                min = j;
             }
+            
         }
-
-    }
-    Console.WriteLine($"минимальная сумма в строке c позицией № {min}");
+    //}
+    Console.WriteLine($"минимальная сумма в строке c индексом № {min}");
 }
 //int[,] arr = CreateArray();
 //PrintArray(arr); // выводим полученный массив
