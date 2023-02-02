@@ -8,6 +8,20 @@
 9 5 3 2
 8 4 4 2
 */
+int[,] CreateArray(int rows = 3, int col = 3)
+{
+    Random rnd = new Random();
+    int[,] array = new int[rows, col];
+
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            array[i, j] = rnd.Next(0, 10);
+        }
+    }
+    return array;
+}
 
 void PrintArray(int[,] array)
 {
@@ -40,6 +54,10 @@ int[,] SortStringArray(int[,] arr)
     }
     return arr;
 }
-int[,] arr = { { 1, 4, 7, 2 }, { 5, 9, 2, 3 }, { 8, 4, 2, 4 } };
+
+int[,] arr = CreateArray();
+PrintArray(arr); // выводим полученный массив
+Console.WriteLine("Полученный массив отсортирован по строчно по убыванию");
+//int[,] arr = { { 1, 4, 7, 2 }, { 5, 9, 2, 3 }, { 8, 4, 2, 4 } };
 arr = SortStringArray(arr);
-PrintArray(arr);
+PrintArray(arr);    
